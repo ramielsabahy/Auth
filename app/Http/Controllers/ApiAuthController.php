@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\User;
 
 class ApiAuthController extends Controller
 {
@@ -42,11 +43,11 @@ class ApiAuthController extends Controller
 		]);
 
 		// generate token
-		$token = JWTAuth::fromUser($user);
+		$token = \JWTAuth::fromUser($user);
 
 		// return response
 		return response()->json([
-			'token' => $token
+			'message' => 'Registered successfully.'
 		], 200);
 	}
 
