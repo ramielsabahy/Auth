@@ -29,3 +29,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('jwt.auth');
 
 Route::any('users', 'UserController@index')->middleware('jwt.auth');
+
+Route::any('transform', 'UserController@transform')->middleware('jwt.auth');
