@@ -24,6 +24,8 @@ class UserController extends Controller
 
     	$users = \App\User::first();
 
-    	return (new UsersTransformer)->transform($users);
+    	return response(
+			UsersTransformer::transform( \App\User::all() )
+		);
     }
 }
