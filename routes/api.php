@@ -27,3 +27,5 @@ Route::get('/user', function (Request $request) {
 	$user = JWTAuth::toUser($token);
 	return $user;
 })->middleware('jwt.auth');
+
+Route::any('users', 'UserController@index')->middleware('jwt.auth');
