@@ -136,7 +136,7 @@
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    @include('Admin.sidebar')
+                    @include('layouts.sidebar')
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
